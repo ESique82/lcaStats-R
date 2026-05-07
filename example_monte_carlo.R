@@ -128,3 +128,20 @@ gsd2_df <- data.frame(
 
 results_from_gsd2 <- run_monte_carlo_gsd2(mean_df, gsd2_df, n = 10000)
 print(results_from_gsd2$total)
+
+# ---------------------------------------------------------------------------
+# 7. Real-world usage — loading inventory from CSV
+# ---------------------------------------------------------------------------
+
+# In a real study, load your inventory from a CSV file:
+# inventory <- read.csv("my_inventory.csv")
+#
+# Expected columns:
+#   food_item, stage, amount,
+#   reliability, completeness, temporal_correlation,
+#   geographical_correlation, technology_correlation, basic_var
+#
+# Then run the full pipeline:
+# results <- inventory |>
+#   batch_from_dataframe() |>
+#   run_monte_carlo(n = 10000)
