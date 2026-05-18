@@ -1,0 +1,21 @@
+food_item,stage,exchange,amount,reliability,completeness,temporal_correlation,geographical_correlation,technology_correlation,basic_var
+wheat_bread,production,CO2 - land preparation,0.12,1,1,2,1,1,1.05
+wheat_bread,production,CO2 - fertiliser manufacturing,0.18,2,2,3,2,2,1.05
+wheat_bread,production,N2O - nitrogen application,0.29,2,3,3,2,2,1.05
+wheat_bread,production,CO2 - diesel machinery,0.08,1,2,2,1,2,1.05
+wheat_bread,milling,CO2 - electricity,0.09,1,1,1,1,1,1.05
+wheat_bread,milling,CO2 - transport,0.03,2,2,2,2,2,1.05
+wheat_bread,baking,CO2 - natural gas,0.11,1,2,2,1,1,1.05
+wheat_bread,baking,CO2 - packaging,0.04,2,2,3,2,3,1.05
+wheat_bread,retail,CO2 - refrigeration,0.02,2,3,3,3,3,1.05
+wheat_bread,retail,CO2 - transport,0.03,2,2,3,2,2,1.05
+beef_burger,production,CO2 - enteric fermentation,5.20,1,1,2,2,1,1.05
+beef_burger,production,N2O - manure management,3.10,2,2,3,2,2,1.05
+beef_burger,production,CO2 - land use change,4.80,3,3,4,3,3,1.05
+beef_burger,production,CO2 - feed production,1.90,2,3,3,3,3,1.05
+beef_burger,processing,CO2 - slaughter electricity,0.25,1,2,2,1,2,1.05
+beef_burger,processing,CO2 - refrigeration,0.18,2,2,3,2,2,1.05
+beef_burger,processing,CO2 - packaging,0.12,2,3,3,3,3,1.05
+beef_burger,retail,CO2 - cold chain,0.35,2,2,3,2,2,1.05
+beef_burger,retail,CO2 - transport,0.08,2,3,3,3,3,1.05
+beef_burger,retail,CO2 - waste,0.05,3,3,4,3,3,1.05
