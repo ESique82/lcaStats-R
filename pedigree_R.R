@@ -413,29 +413,7 @@ batch_from_dataframe <- function(df) {
 # ---------------------------------------------------------------------------
 
 #' @export
-batch_from_csv <- function(df, basic_var_col = "basic_var") {
-  
-  required_cols <- c(names(PEDIGREE_TABLE), basic_var_col)
-  missing_cols  <- setdiff(required_cols, names(df))
-  
-  if (length(missing_cols) > 0) {
-    stop(sprintf("Missing required columns: %s",
-                 paste(missing_cols, collapse = ", ")))
-  }
-  
-  results <- lapply(seq_len(nrow(df)), function(i) {
-    row <- df[i, ]
-    out <- scores_to_gsd2(
-      reliability              = as.integer(row$reliability),
-      completeness             = as.integer(row$completeness),
-      temporal_correlation     = as.integer(row$temporal_correlation),
-      geographical_correlation = as.integer(row$geographical_correlation),
-      technology_correlation   = as.integer(row$technology_correlation),
-      basic_var                = as.numeric(row[[basic_var_col]])
-    )
-    data.frame(combined_var=out$combined_var, gsd2=out$gsd2,
-               gsd=out$gsd, sigma_ln=out$sigma_ln)
-  })
-  
-  cbind(df, do.call(rbind, results))
+batch_from_csv <- function(filepath) {
+  df <- read.csv(filepath)
+  batch_from_dataframe(df)
 }
